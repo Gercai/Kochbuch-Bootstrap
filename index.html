@@ -1,39 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
 </head>
+
 <body>
-        <header>
-            <!-- Vitali macht den Nav-->
-            <nav></nav>
-        </header>
+    <header>
+        <!-- Vitali macht den Nav-->
+        <nav></nav>
+    </header>
 
-        <main>
+    <main>
 
-            <div>
-                <!--
-                  Liste von Kategorien. (Wenn kategorien )  
-                  Wenn auf kategorie geklickt wird. Kommt eine liste von Gerichten.
+        <div>
+            <!-- Tags-->
+            <div class="d-flex justify-content-center gap-5 flex-wrap mt-5">
+
+                <a class="btn btn-light" href="#" role="button">
+                    <img class="object-fit-cover rounded-circle"
+                        src="https://images.unsplash.com/photo-1546069901-d5bfd2cbfb1f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+                        alt="Bowl" height="100" width="100">
+                    <p>Bowls</p>
+                </a>
 
 
+                <a class="btn btn-light" href="#" role="button" width="100">
+                    <div class="object-fit-cover rounded-circle">
+                        <img class="object-fit-cover rounded-circle"
+                            src="https://images.unsplash.com/photo-1520072959219-c595dc870360?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1290&q=80"
+                            alt="Burger" height="100" width="100">
+                    </div>
+                    <p>Burger</p>
+                </a>
+                <a class="btn btn-light" href="#" role="button" width="100">
+                    <div class="object-fit-cover rounded-circle">
+                        <img class="object-fit-cover rounded-circle"
+                            src="https://images.unsplash.com/photo-1627286400579-027de47e9e73?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                            alt="Italian" height="100" width="100">
+                    </div>
+                    <p>Italian</p>
+                </a>
+                <a class="btn btn-light" href="#" role="button" width="100">
+                    <div class="object-fit-cover rounded-circle">
+                        <img class="object-fit-cover rounded-circle"
+                            src="https://images.unsplash.com/photo-1600850056064-a8b380df8395?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                            alt="Vegan" height="100" width="100">
+                    </div>
+                    <p>Vegan</p>
+                </a>
+                <a class="btn btn-light" href="#indian" data-toggle="collapse" role="button">
+                    <div class="object-fit-cover rounded-circle">
+                        <img class="object-fit-cover rounded-circle"
+                            src="https://images.unsplash.com/photo-1606471191009-63994c53433b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aW5kaWFuJTIwY3Vycnl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                            alt="Indian" height="100" width="100">
+                    </div>
+                    <p>Indian</p>
+                </a>
 
-                -->
+
+                <!-- Button -->
+                <button type="button" class="btn btn-light" data-toggle="collapse" data-target="#asian" aria-expanded="false" aria-controls="asian">
+                    <img class="img object-fit-cover rounded-circle"
+                         src="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                        alt="Asian" height="100" width="100">
+                    <p>Asian</p>
+                </button>
+
+
+                <!-- Href -->
+                <a class="btn btn-light" data-toggle="collapse" href="#asian" role="button" aria-expanded="false" aria-controls="asian">
+                    <img class="object-fit-cover rounded-circle"
+                        src="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                        alt="Asian" height="100" width="100">
+                    <p>Asian</p>
+                </a>
+
             </div>
-            <div>
-                <!--
+
+            <div id="asian" class="collapse show">
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-light"><strong>Asian Recipes</strong></li>
+                    <li class="list-group-item list-group-item-light">Pho</li>
+                    <li class="list-group-item list-group-item-light">Bun Cha Ha Noi</li>
+                    <li class="list-group-item list-group-item-light">Chop Suey</li>
+                    <li class="list-group-item list-group-item-light">Bun Nem</li>
+                    <li class="list-group-item list-group-item-light">Massaman Curry</li>
+                </ul>
+          </div>
+
+            <div id="indian" class="collapse">
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-light"><strong>Indian Recipes</strong></li>
+                    <li class="list-group-item list-group-item-light">Mattar Panir</li>
+                    <li class="list-group-item list-group-item-light">Daal</li>
+                    <li class="list-group-item list-group-item-light">Butter Chicken</li>
+                    <li class="list-group-item list-group-item-light">Papadam</li>
+                    <li class="list-group-item list-group-item-light">Murgh Korma</li>
+                </ul>
+            </div>
+        </div>
+
+
+    <!-- End of Test -->
+        <div>
+            <!--
                     Emphelungen vielleicht auch die zusatz
 
                 -->
-            </div>
+        </div>
 
-            <div>
-                <!--
+        <div>
+            <!--
 
                     Gerald
 
@@ -46,15 +130,16 @@
                     Raufklickt > Neue mit dem Gericht. 
                     Zutatenliste und Zubereitung.
                 -->
-            </div>
+        </div>
 
-        </main>
+    </main>
 
-        <footer>
+    <footer>
 
-        </footer>
+    </footer>
 
 
 
 </body>
+
 </html>
