@@ -6,14 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-
+        <link rel="stylesheet" href="src/card.css">
 </head>
 <body>
 
 	<!-- Vitali macht den Nav-->
-
 	<nav class="navbar navbar-expand-lg bg-body-tertiary">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">Gruppe 4</a>
@@ -39,9 +40,9 @@
 		</div>
 	</nav>
     <main>
-
         <div>
             <!-- Tags-->
+            
             <div class="d-flex justify-content-center gap-5 flex-wrap mt-5">
 
                 <a class="btn btn-light" href="#" role="button">
@@ -50,7 +51,6 @@
                         alt="Bowl" height="100" width="100">
                     <p>Bowls</p>
                 </a>
-
 
                 <a class="btn btn-light" href="#" role="button" width="100">
                     <div class="object-fit-cover rounded-circle">
@@ -85,7 +85,6 @@
                     <p>Indian</p>
                 </a>
 
-
                 <!-- Button -->
                 <button type="button" class="btn btn-light" data-toggle="collapse" data-target="#asian" aria-expanded="false" aria-controls="asian">
                     <img class="img object-fit-cover rounded-circle"
@@ -93,7 +92,6 @@
                         alt="Asian" height="100" width="100">
                     <p>Asian</p>
                 </button>
-
 
                 <!-- Href -->
                 <a class="btn btn-light" data-toggle="collapse" href="#asian" role="button" aria-expanded="false" aria-controls="asian">
@@ -135,21 +133,21 @@
                     Emphelungen vielleicht auch die zusatz
                 -->
             </div>
-            <div>
-
+            <div class="cardboxcenter">
              <!--Container mit jeweils 3 Karten pro reihe-->
-
-                      <div class="row row-cols-1 row-cols-md-3">
+                      <div class="row row-cols-1 row-cols-md-3 cardbox">
                         <div class="col mb-4">
-                          <div class="card">
+                          <div class="card" data-bs-toggle="collapse" data-bs-target="#ing1" aria-expanded="false" aria-controls="ing1">
 
                             <div class="card-body">
                             
                                 <h5 class="card-title">Card title1</h5>
                                 <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <img src="https://images.unsplash.com/photo-1618449840665-9ed506d73a34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" class="card-img-top" alt="...">
-<div>
-                                <table class="table table-sm">
+                                <img src="https://images.unsplash.com/photo-1618449840665-9ed506d73a34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" 
+                                class="card-img-top" alt="...">
+                     
+                                <div id="ing1" class="collapse">
+                                <table class="table table-sm" >
                                     <thead>
                                       <tr>
                                         <th scope="col">Ingredient</th>
@@ -175,8 +173,8 @@
                                   <p>
                                     Alles in den Topf werfen
                                   </p>
+                                  <button class="btn btn-primary">Share</button>
                                 </div>
-                                <button class="btn btn-primary">Share</button>
                             </div>
                           </div>
                         </div>
@@ -217,12 +215,10 @@
    </div>
         </main>
           <footer>
-         </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <script>
-      //collapse manuel testen
-        const collapseElementList = document.querySelectorAll('.collapse')
-const collapseList = [...collapseElementList].map(collapseEl => new bootstrap.Collapse(collapseEl))
-        </script>
+         </footer>        
+
+         <title>Bootstrap Example</title>
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+         <script src="src/script.js"></script>
     </body>
 </html>
