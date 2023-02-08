@@ -12,6 +12,21 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="src/script.js"></script>
+
+
+
+    <!-- <script>
+
+$(document.body).on('click', ':not(.panel) > [data-toggle="collapse"][data-parent]', function() {
+    var parent = $(this).data('parent');
+    console.log(parent);
+    var target = $(this).data('target') || $(this).prop('hash');
+    console.log(target);
+    $(parent).find('.collapse.in').not(target).collapse('hide');
+});
+  </script> -->
+  
 </head>
 
 <body>
@@ -45,9 +60,9 @@
     </nav>
     <main>
 
-        <div>
-            <!-- Tags-->
-            <div class="d-flex justify-content-center gap-5 flex-wrap mt-4 mb-4">
+ <div id="myGroup">
+            <!-- Tags Hier sind die ganzen Buttons für die Gruppen-->
+            <div class="d-flex justify-content-center gap-5 flex-wrap mt-5">
 
                 <a class="btn btn-light" href="#" role="button">
                     <img class="object-fit-cover rounded-circle"
@@ -107,12 +122,12 @@
                   </button> -->
             </div>
 
-
             <!-- Different Lists with Recipes for the categories-->
+            
             <section class="d-flex justify-content-center">
 
                 <!--category: Asian-->
-                <div id="asian" class="container m-4 collapse">
+                <div id="asian" class="container m-4 collapse" data-parent="#myGroup">
                     <ul class="row list-group col-12 justify-content-center">
                         <li class="list-unstyled">
                             <h3>Asian Recipes</h3>
@@ -152,7 +167,7 @@
                 </div>
 
                 <!--category:Indian-->
-                <div id="indian" class="container m-4 collapse">
+                <div id="indian" class="container m-4 collapse" data-parent="#myGroup">
                     <ul class="row list-group col-12 justify-content-center">
                     <li class = " list-unstyled">
                         <h3>Indian Recipes</h3>
@@ -167,7 +182,7 @@
                         </li>
 
                         <li class="list-group-item d-flex justify-content-between align-items-start list-group-item-action">
-                            <div class="ms-2 me-auto">
+                            <div class="ms-2 me-auto" data-bs-toggle="collapse" data-bs-target="#palakPanir" aria-expanded="false" aria-controls="palakPanir">
                                 <div class="fw-bold">Palak Panir</div>
                                 Indian cheese in spinach sauce. Spinach was never so good!
                             </div>
@@ -200,7 +215,7 @@
                 </div>
 
                 <!--Italian-->
-                <div id="italian" class="container m-4 collapse">
+                <div id="italian" class="container m-4 collapse" data-parent="#myGroup">
                     <ul class="row list-group col-12 justify-content-center">
                     <li class = "list-unstyled">
                         <h3>Italian</h3>
@@ -246,96 +261,89 @@
             <!--Container mit jeweils 3 Karten pro reihe-->
 
             <div class="cardboxcenter">
-                <!--Container mit jeweils 3 Karten pro reihe-->
-                <div class="row row-cols-1 row-cols-md-3 cardbox">
-                    <div class="col mb-4">
-                        <div class="card" data-bs-toggle="collapse" data-bs-target="#ing1" aria-expanded="false"
-                            aria-controls="ing1">
+              <!--Container mit jeweils 3 Karten pro reihe-->
+                       <div class="row row-cols-1 row-cols-md-3 cardbox">
+                         <div class="col mb-4">
+                           <div class="card" data-bs-toggle="collapse" data-bs-target="#ing1" aria-expanded="false" aria-controls="ing1">
+ 
+                             <div class="card-body">
+                             
+                                 <h5 class="card-title">Card title1</h5>
+                                 <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                 <img src="https://images.unsplash.com/photo-1618449840665-9ed506d73a34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" 
+                                 class="card-img-top" alt="...">
+                      
+                                 <div id="ing1" class="collapse">
+                                 <table class="table table-sm" >
+                                     <thead>
+                                       <tr>
+                                         <th scope="col">Ingredient</th>
+                                         <th scope="col">Amount</th>
+                                       </tr>
+                                     </thead>
+                                     <tbody>
+                                       <tr>
+                                         <td>Carrots</td>
+                                         <td>2</td>
+                                       </tr>
+                                       <tr>
+                                         <td>Sugar</td>
+                                         <td>2 TS</td>
+                                       </tr>
+                                       <tr>
+                                         <td>Butter</td>
+                                         <td>50 g</td>
+                                       </tr>
+                                     </tbody>
+                                   </table>
+                                   <h5>Zubereitung</h2>
+                                   <p>
+                                     Alles in den Topf werfen
+                                   </p>
+                                   <button class="btn btn-primary">Share</button>
+                                 </div>
+                             </div>
+                           </div>
+                         </div>
+                         <div class="col mb-4">
+                           <div class="card">
+                        
+                             <img src="https://images.unsplash.com/photo-1618449840665-9ed506d73a34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" class="card-img-top" alt="...">
+                             <div class="card-body">
+                               <h5 class="card-title">Card title2</h5>
+                               <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                               <button class="btn btn-primary" onclick=shareRecipe()>Share</button>
+                             </div>
+                           </div>
+                         </div>
+                         <div class="col mb-4 collapse" id="palakPanir">
+                           <div class="card">
+                          
+                             <img src="https://images.unsplash.com/photo-1618449840665-9ed506d73a34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" class="card-img-top" alt="...">
+                             <div class="card-body">
+                               <h5 class="card-title">Palak Panir</h5>
+                               <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                               <button class="btn btn-primary" onclick=shareRecipe()>Share</button>
+ 
+                             </div>
+                           </div>
+                         </div>
+                         <div class="col mb-4">
+                           <div class="card"> 
+                             <img src="https://images.unsplash.com/photo-1618449840665-9ed506d73a34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" class="card-img-top" alt="...">
+                             <div class="card-body">
+                               <h5 class="card-title">Card title</h5>
+                               <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                               <button class="btn btn-primary" onclick=shareRecipe()>Share</button>
+                             </div>
+                           </div>
+                         </div>
+                       </div>
+    </div>
+        </main>
+         <title>Bootstrap Example</title>
 
-                            <div class="card-body">
-
-                                <h5 class="card-title">Card title1</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                                <img src="https://images.unsplash.com/photo-1618449840665-9ed506d73a34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-                                    class="card-img-top" alt="...">
-
-                                <div id="ing1" class="collapse">
-                                    <table class="table table-sm">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">Ingredient</th>
-                                                <th scope="col">Amount</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Carrots</td>
-                                                <td>2</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Sugar</td>
-                                                <td>2 TS</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Butter</td>
-                                                <td>50 g</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <h5>Zubereitung</h2>
-                                        <p>
-                                            Alles in den Topf werfen
-                                        </p>
-                                        <button class="btn btn-primary">Share</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-4">
-                        <div class="card">
-
-                            <img src="https://images.unsplash.com/photo-1618449840665-9ed506d73a34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-                                class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title2</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                                <button class="btn btn-primary">Share</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-4">
-                        <div class="card">
-
-                            <img src="https://images.unsplash.com/photo-1618449840665-9ed506d73a34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-                                class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural
-                                    lead-in to additional content.</p>
-                                <button class="btn btn-primary">Share</button>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-4">
-                        <div class="card">
-                            <img src="https://images.unsplash.com/photo-1618449840665-9ed506d73a34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-                                class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                                <button class="btn btn-primary">Share</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </main>
-    <title>Bootstrap Example</title>
-    <script src="src/script.js"></script>
-</body>
-
+         <script src="./src/script.js"></script>
+    </body>
 </html>
+
