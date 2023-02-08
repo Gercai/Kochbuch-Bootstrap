@@ -12,3 +12,8 @@
         align-items: center;
     }
 
+    /*doesnt work: tried to make the hover.color a little darker than default
+    /* .list-group-item  .list-group-item-action :hover {
+        background-color: lightgrey;
+      
+      } */ 
