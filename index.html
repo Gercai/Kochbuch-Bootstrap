@@ -59,8 +59,7 @@ $(document.body).on('click', ':not(.panel) > [data-toggle="collapse"][data-paren
         </div>
     </nav>
     <main>
-
-        <div id="myGroup">
+ <div id="myGroup">
             <!-- Tags Hier sind die ganzen Buttons für die Gruppen-->
             <div class="d-flex justify-content-center gap-5 flex-wrap mt-5">
 
@@ -124,7 +123,7 @@ $(document.body).on('click', ':not(.panel) > [data-toggle="collapse"][data-paren
 
             <!-- Different Lists with Recipes for the categories-->
             <div id="asian" class="container mt-5 mb-5 collapse" data-parent="#myGroup">
-                <ul class="row list-group col-12  col-sm-10 col-md-8 col-lg-6">
+          <ul class="row list-group col-12  col-sm-10 col-md-8 col-lg-6">
                     <li class = "list-unstyled">
                         <h3>Asian Recipes</h3>
                     </li>
@@ -309,7 +308,7 @@ $(document.body).on('click', ':not(.panel) > [data-toggle="collapse"][data-paren
                              <div class="card-body">
                                <h5 class="card-title">Card title2</h5>
                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                               <button class="btn btn-primary">Share</button>
+                               <button class="btn btn-primary" onclick=shareRecipe()>Share</button>
                              </div>
                            </div>
                          </div>
@@ -320,7 +319,7 @@ $(document.body).on('click', ':not(.panel) > [data-toggle="collapse"][data-paren
                              <div class="card-body">
                                <h5 class="card-title">Palak Panir</h5>
                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                               <button class="btn btn-primary">Share</button>
+                               <button class="btn btn-primary" onclick=shareRecipe()>Share</button>
  
                              </div>
                            </div>
@@ -331,7 +330,7 @@ $(document.body).on('click', ':not(.panel) > [data-toggle="collapse"][data-paren
                              <div class="card-body">
                                <h5 class="card-title">Card title</h5>
                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                               <button class="btn btn-primary">Share</button>
+                               <button class="btn btn-primary" onclick=shareRecipe()>Share</button>
                              </div>
                            </div>
                          </div>
@@ -339,5 +338,7 @@ $(document.body).on('click', ':not(.panel) > [data-toggle="collapse"][data-paren
     </div>
         </main>
          <title>Bootstrap Example</title>
+
+         <script src="./src/script.js"></script>
     </body>
 </html>
