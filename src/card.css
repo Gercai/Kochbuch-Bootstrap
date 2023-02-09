@@ -1,11 +1,7 @@
 .card img{
     max-height: 200px;
     }
-    
-    .cardbox{
-        width: 60vw;
-    }
-    
+     
     .cardboxcenter{
         display: flex;
         justify-content: center;
@@ -16,3 +12,16 @@
         background-color: lightgrey;
       
       } */ 
+
+
+.flex1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.carousel-caption{
+    left: 10%;
+    right: 10%;
+}
