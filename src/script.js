@@ -17,20 +17,9 @@ function shareRecipe(e){
 // Funktion hab eich kopiert und angepasst. element ist die unformation des elements welches geklickt wird
 // dazu braucht man aber den event listener.
 
-function shareRecipe2(element){
-
-    const food = element.currentTarget.parentElement.parentElement.parentElement.parentElement.id;
-    const url = window.location.href
-  
-    window.alert(`the page at localhost: ${food} says:\n\n\n I am ${food} and I have taken ${url} as my Prisoner`);
-    
-};
-
 // mit document. kann man sich ein Element aus dem Dokument rausssuchen. In diesem fall habe ich nach der
 // classe share gesucht. Also alle elemente welche diese Klasse besitzen. 
 
-let shareButton =  document.getElementsByClassName("share");
-[...shareButton].map((item) => item.addEventListener('click',shareRecipe2,false));
 
 
 // Dies ist eine besonderheit. Bei id reicht es ohne loop.
@@ -55,14 +44,8 @@ function toggle(){
     const foodList = document.querySelectorAll(".foodList");
     [...foodList].map((element) => element.classList.remove("show"));
 };
-
-
-
 const categories =  document.querySelectorAll("#foodCategories>a");
-console.log(categories);
-
 [...categories].map((item) => item.addEventListener('click',toggle,false));
-
 
 
 // Database for cards
@@ -93,13 +76,12 @@ let foods = [
         description: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
     },
    
-
 ]
 
 foods.map((element) => {
     let cardBox = document.querySelector("#cardBox");
     let html_to_insert = `
-    <div class="mb-4 collapse" id="${element.id}">
+    <div class="col mb-4 collapse" id="${element.id}">
     <div class="card">
         <button type="button" class="btn-close p-3"  data-bs-toggle="collapse" data-bs-target="#${element.id}" aria-expanded="true"
         aria-controls="${element.id}"></button>
@@ -149,6 +131,24 @@ foods.map((element) => {
 
 
 })
+
+
+
+//Share muss nach dem rendern passieren. Schauen ob das nicht besser geht. Wahrscheinlich promise.
+
+let shareButton =  document.getElementsByClassName("share");
+
+[...shareButton].map((item) => item.addEventListener('click',shareRecipe2,false)
+);
+
+
+function shareRecipe2(element){
+
+    const food = element.currentTarget.parentElement.parentElement.parentElement.parentElement.id;
+     const url = window.location.href
+    window.alert(`the page at localhost: ${food} says:\n\n\n I am ${food} and I have taken ${url} as my Prisoner`);
+    
+};
 
 
 
