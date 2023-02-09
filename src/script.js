@@ -20,7 +20,9 @@ function shareRecipe(e){
 function shareRecipe2(element){
 
     const food = element.currentTarget.parentElement.parentElement.parentElement.parentElement.id;
-    window.alert(`the page at localhost: ${food} says:\n\n\n I am ${food}`);
+    const url = window.location.href
+  
+    window.alert(`the page at localhost: ${food} says:\n\n\n I am ${food} and I have taken ${url} as my Prisoner`);
     
 };
 
@@ -44,14 +46,18 @@ let shareButton =  document.getElementsByClassName("share");
 // shareButton[i].addEventListener('click', shareRecipe2, false);
 // };
 
-
-
-
-
-
 // const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 // const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
+//Closing foodlists which are open.
+
+function toggle(){
+    const foodList = document.querySelectorAll(".foodList");
+    [...foodList].map((element) => element.classList.remove("show"));
+};
+
+const categories =  document.querySelectorAll("#foodCategories>a");
+[...categories].map((item) => item.addEventListener('click',toggle,false));
 
 
 

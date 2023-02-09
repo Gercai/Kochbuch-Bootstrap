@@ -104,7 +104,7 @@
 
         <div id="myGroup">
             <!-- Tags Hier sind die ganzen Buttons für die Gruppen-->
-            <div class="d-flex justify-content-center gap-5 flex-wrap mt-5">
+            <div id="foodCategories" class="d-flex justify-content-center gap-5 flex-wrap mt-5">
 
                 <a class="btn btn-light" href="#bowls" role="button" data-bs-toggle="collapse" role="button">
                     <img class="object-fit-cover rounded-circle"
@@ -164,14 +164,14 @@
                   </button> -->
             </div>
 
-            <!-- Different Lists with Recipes for the categories-->
+            <!-- Different Lists with Recipes for the categories%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
 
-            <section class="d-flex justify-content-center">
+            <section class="d-flex justify-content-center flex-column flex-md-row">
 
                 <!--category: Asian-->
-                <div id="asian" class="container m-4 collapse" data-parent="#myGroup">
-                    <ul class="row list-group col-12 justify-content-center">
-                        <li class="list-unstyled">
+                <div id="asian" class="container m-4 collapse foodList" data-parent="#myGroup">
+                    <ul class="list-group justify-content-center">
+                      <li class="list-unstyled">
                             <h3>Asian Recipes</h3>
                         </li>
 
@@ -219,11 +219,12 @@
                                 <img src="./src/img/Chili_Pepper.png" alt="spicy" width="15">
                             </span>
                         </li>
+                    </ul>
                 </div>
 
                 <!--category:Indian-->
-                <div id="indian" class="container m-4 collapse" data-parent="#myGroup">
-                    <ul class="row list-group col-12 justify-content-center">
+                <div id="indian" class="container m-4 collapse foodList" data-parent="#myGroup">
+                    <ul class="list-group justify-content-center">
                         <li class=" list-unstyled">
                             <h3>Indian Recipes</h3>
                         </li>
@@ -287,8 +288,8 @@
                 </div>
 
                 <!--Italian-->
-                <div id="italian" class="container m-4 collapse" data-parent="#myGroup">
-                    <ul class="row list-group col-12 justify-content-center">
+                <div id="italian" class="container m-4 collapse foodList" data-parent="#myGroup">
+                    <ul class="list-group justify-content-center">
                         <li class="list-unstyled">
                             <h3>Italian</h3>
                         </li>
@@ -329,8 +330,8 @@
                 </div>
 
                 <!--Bowls-->
-                <div id="bowls" class="container m-4 collapse" data-parent="#myGroup">
-                    <ul class="row list-group col-12 justify-content-center">
+                <div id="bowls" class="container m-4 collapse foodList" data-parent="#myGroup">
+                    <ul class="list-group justify-content-center">
                         <li class="list-unstyled">
                             <h3>Bowls</h3>
                         </li>
@@ -381,7 +382,9 @@
                         </li>
                     </ul>
                 </div>
-        </div>
+            </section>
+
+
         <div>
 
 
@@ -391,7 +394,7 @@
 
             <div class="cardboxcenter">
                 <!--Container mit jeweils 3 Karten pro reihe-->
-                <div class="row row-cols-1 row-cols-md-3 cardbox">
+                <div class="col col-sm col-md-10 row-lg-8 m-4 cardbox col-md-10 col-lg-8 ">
                     <div class="col mb-4 collapse" id="pho">
                         <div class="card">
                             <button type="button" class="btn-close p-3" data-bs-toggle="collapse" data-bs-target="#pho"
