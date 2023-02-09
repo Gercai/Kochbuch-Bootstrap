@@ -1,7 +1,6 @@
 .card img{
     max-height: 200px;
     }
-     
     .cardboxcenter{
         display: flex;
         justify-content: center;
@@ -13,15 +12,12 @@
       
       } */ 
 
+      .cardbox{
+        width: 100%;
+      }
 
-.flex1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+      #asian, #bowls, #indian, #italian, #vegan, #burger{
+        padding-left: 0;
+        padding-right: 0%
+      }
 
-
-.carousel-caption{
-    left: 10%;
-    right: 10%;
-}
