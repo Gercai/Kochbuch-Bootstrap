@@ -1,8 +1,6 @@
 .card img{
     max-height: 200px;
     }
-    
-    
     .cardboxcenter{
         display: flex;
         justify-content: center;
