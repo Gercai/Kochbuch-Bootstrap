@@ -13,11 +13,98 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Defer steht dafür das das script am ende geladen wird-->
+
     <script src="src/script.js" defer></script>
+
+<style>
+	.custom-tooltip {
+		/* --bs-tooltip-bg: var(--bs-success); */
+		--bs-tooltip-bg: #ff7300;
+	}
+  
+  // vitali - Enable tooltips
+				/* Level 3 – CSS Hover animations. 
+					When the user hovers the recipe image with the mouse, the recipe title must be displayed on top of it
+				*/
+				const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+				const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+			</script>
+  
+
 </head>
 
 <body>
+<!-- Vitali macht den Nav-->
+
+
+
+	<nav class="navbar navbar-expand-md navbar-dark pt-0">
+		<div class="container-fluid bg-success bg-gradient">
+		 	<a class="navbar-brand" href="#">
+				<img data-bs-toggle="tooltip" 
+					data-bs-placement="right"
+					data-bs-custom-class="custom-tooltip"
+					data-bs-title="https://gercai.github.io/Kochbuch-Bootstrap/" 
+					class="rounded-3" 
+					src="https://images.unsplash.com/photo-1624811533744-f85d5325d49c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=80" 
+				alt="Logo" height="100" class="d-inline-block align-text-top">
+				<span style="margin-left: -120px; margin-right: 120px; color: white; text-shadow: 2px 2px 2px black;">Gruppe 4</span> 
+			</a>
+		  <button class="navbar-toggler" 
+				type="button" data-bs-toggle="collapse" 
+				data-bs-target="#navbarTogglerNavi" 
+				aria-controls="navbarTogglerNavi" 
+				aria-expanded="false" 
+				aria-label="Toggle navigation">
+			 <span class="navbar-toggler-icon">*</span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarTogglerNavi">
+			<ul class="navbar-nav text-center">
+				<li class="nav-item bg-success bg-gradient">
+					<a class="nav-link" aria-current="page" href="#">Bowls</a>
+				</li>
+				<li class="nav-item bg-success bg-gradient">
+					<a class="nav-link" href="#">Burger</a>
+				</li>
+				<li class="nav-item bg-success bg-gradient">
+					<a class="nav-link" href="#">Italian</a>
+				</li>
+				<li class="nav-item bg-success bg-gradient">
+					<a class="nav-link" href="#">Vegan</a>
+				</li>
+				<li class="nav-item bg-success bg-gradient">
+					<a class="nav-link" href="#">Indian</a>
+				</li>
+				<li class="nav-item bg-success bg-gradient">
+					<a class="nav-link" href="#">Asian</a>
+				</li>
+			</ul>
+		  </div>
+		</div>
+	 </nav>
+
+
+
+
+	<header class="container text-center rounded-3 p-3" 
+		style="height: 300px; background-position: center; background-repeat: no-repeat; background-size: cover; 
+			background-image: linear-gradient(180deg, #146c43, transparent), 
+			url('https://images.unsplash.com/photo-1542010589005-d1eacc3918f2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80');">
+		<div class="row h-md-50 justify-content-center align-items-center">
+			<div class="col text-light">
+				<h2 class="h1">Suche in 100 Rezepten auf Kochbuch-Bootstrap</h2>
+				<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi fugit esse ut similique cupiditate. Eum consequatur aliquam, quod modi aut labore voluptatem iste inventore ipsa nesciunt autem facere porro ipsum.</p>
+			</div>	
+		</div>
+		<div class="row justify-content-center">	
+			<div class="col col-md-6">
+				<form class="d-flex" role="search">
+					<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+					<button class="btn btn-success" type="submit">Search</button>
+				 </form>
+			</div>
+		</div>
+	</header>
 
     <!-- Vitali macht den Nav-->
     <nav class="navbar navbar-expand-md navbar-dark pt-0">
@@ -959,5 +1046,4 @@
           <div>
 
 </body>
-
 </html>
