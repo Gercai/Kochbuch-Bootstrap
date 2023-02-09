@@ -81,9 +81,6 @@
 		</div>
 	 </nav>
 
-
-
-
 	<header class="container text-center rounded-3 p-3" 
 		style="height: 300px; background-position: center; background-repeat: no-repeat; background-size: cover; 
 			background-image: linear-gradient(180deg, #146c43, transparent), 
@@ -107,7 +104,7 @@
 
         <div id="myGroup">
             <!-- Tags Hier sind die ganzen Buttons für die Gruppen-->
-            <div class="d-flex justify-content-center gap-5 flex-wrap mt-5">
+            <div id="foodCategories" class="d-flex justify-content-center gap-5 flex-wrap mt-5">
 
                 <a class="btn btn-light" href="#bowls" role="button" data-bs-toggle="collapse" role="button">
                     <img class="object-fit-cover rounded-circle"
@@ -172,7 +169,7 @@
             <section class="d-flex justify-content-center">
 
                 <!--category: Asian-->
-                <div id="asian" class="container m-4 collapse" data-parent="#myGroup">
+                <div id="asian" class="container m-4 collapse foodList" data-parent="#myGroup">
                     <ul class="row list-group col-12 justify-content-center">
                         <li class="list-unstyled">
                             <h3>Asian Recipes</h3>
@@ -222,10 +219,11 @@
                                 <img src="./src/img/Chili_Pepper.png" alt="spicy" width="15" >
                             </span>
                         </li>
+                    </ul>
                 </div>
 
                 <!--category:Indian-->
-                <div id="indian" class="container m-4 collapse" data-parent="#myGroup">
+                <div id="indian" class="container m-4 collapse foodList" data-parent="#myGroup">
                     <ul class="row list-group col-12 justify-content-center">
                         <li class=" list-unstyled">
                             <h3>Indian Recipes</h3>
@@ -290,7 +288,7 @@
                 </div>
 
                 <!--Italian-->
-                <div id="italian" class="container m-4 collapse" data-parent="#myGroup">
+                <div id="italian" class="container m-4 collapse foodList" data-parent="#myGroup">
                     <ul class="row list-group col-12 justify-content-center">
                         <li class="list-unstyled">
                             <h3>Italian</h3>
@@ -332,7 +330,7 @@
                 </div>
 
                 <!--Bowls-->
-                <div id="bowls" class="container m-4 collapse" data-parent="#myGroup">
+                <div id="bowls" class="container m-4 collapse foodList" data-parent="#myGroup">
                     <ul class="row list-group col-12 justify-content-center">
                         <li class="list-unstyled">
                             <h3>Bowls</h3>
