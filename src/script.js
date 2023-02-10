@@ -44,53 +44,123 @@ function toggle(){
     const foodList = document.querySelectorAll(".foodList");
     [...foodList].map((element) => element.classList.remove("show"));
 };
+
 const categories =  document.querySelectorAll("#foodCategories>a");
 [...categories].map((item) => item.addEventListener('click',toggle,false));
 
 
 // Database for cards
 
-let foods = [
+let foods = [ 
     pho = {
         id: "pho",
         name: "Pho",
         cuisine: "asian",
+        img: "https://images.unsplash.com/photo-1631709497146-a239ef373cf1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
         description: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
     },
     massamanCurry = {
         id: "massamanCurry",
         name: "Massaman Curry",
         cuisine: "asian",
+        img: "https://images.unsplash.com/photo-1672933036331-e27ffae157bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8TWFzc2FtYW58ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60",
         description: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
     },
     bunNem = {
         id: "bunNem",
         name: "Bunnem",
         cuisine: "asian",
+        img: "https://images.unsplash.com/photo-1564834744159-ff0ea41ba4b9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
         description: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
     },
     chopSuey = {
         id: "chopSuey",
         name: "ChopSuey",
         cuisine: "asian",
+        img: "https://images.unsplash.com/photo-1589302168068-964664d93dc0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
         description: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
     },
-   
+    matterPanir = {
+        id: "matterPanir",
+        name: "Matter Panir",
+        cuisine: "indian",
+        img: "https://images.unsplash.com/photo-1618449840665-9ed506d73a34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+        description: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
+    },
+    palakPanir = {
+        id: "palakPanir",
+        name: "Palak Panir",
+        cuisine: "indian",
+        img: "https://images.unsplash.com/photo-1589647363585-f4a7d3877b10?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80",
+        description: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
+  
+    },
+    papadam = {
+        id: "papadam",
+        name: "Papadam",
+        cuisine: "indian",
+        img: "https://images.unsplash.com/photo-1586524068358-77d2196875e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80",
+        description: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
+  
+    },
+    butterChicken = {
+        id: "butterChicken",
+        name: "Butter Chicken",
+        cuisine: "indian",
+        img: "https://images.unsplash.com/photo-1631292784640-2b24be784d5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+        description: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
+  
+    },
+    murgKorma = {
+        id: "murgKorma",
+        name: "Murg Korma",
+        cuisine: "indian",
+        img: "https://images.unsplash.com/photo-1545247181-516773cae754?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+        description: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
+    },
+    proteinBowl = {
+        id: "proteinBowl",
+        name: "Protein Bowl",
+        cuisine: "bowl",
+        img: "https://images.unsplash.com/photo-1556040220-4096d522378d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Zm9vZCUyMGJvd2x8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60",
+        description: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
+    },
+    seafoodBowl = {
+        id: "seafoodBowl",
+        name: "Seafood Bowl",
+        cuisine: "bowl",
+        img: "https://images.unsplash.com/photo-1602881917760-7379db593981?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Zm9vZCUyMGJvd2x8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60",
+        description: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
+    },
+    avocadoBowl = {
+        id: "avocadoBowl",
+        name: "AvocadoBowl",
+        cuisine: "bowl",
+        img: "https://images.unsplash.com/photo-1594998893017-36147cbcae05?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1186&q=80",
+        description: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
+    },
+    bestVeganBowl = {
+        id: "bestVeganBowl",
+        name: "bestVeganBowl",
+        cuisine: "bowl",
+        img: "https://images.unsplash.com/photo-1540420773420-3366772f4999?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Zm9vZCUyMGJvd2x8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60",
+        description: "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
+    },
 ]
 
-foods.map((element) => {
+foods.map((food) => {
     let cardBox = document.querySelector("#cardBox");
     let html_to_insert = `
-    <div class="col mb-4 collapse" id="${element.id}">
+    <div class="col mb-4 collapse" id="${food.id}">
     <div class="card">
-        <button type="button" class="btn-close p-3"  data-bs-toggle="collapse" data-bs-target="#${element.id}" aria-expanded="true"
-        aria-controls="${element.id}"></button>
+        <button type="button" class="btn-close p-3"  data-bs-toggle="collapse" data-bs-target="#${food.id}" aria-expanded="true"
+        aria-controls="${food.id}"></button>
         <div class="card-body">
 
 
-            <h5 class="card-title">${element.name}</h5>
-            <p class="card-text">${element.description}</p>
-            <img src="https://images.unsplash.com/photo-1631709497146-a239ef373cf1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            <h5 class="card-title">${food.name}</h5>
+            <p class="card-text">${food.description}</p>
+            <img src="${food.img}"  data-bs-toggle="tooltip" data-bs-title="${food.name}"
                 class="card-img-top object-fit-cover" alt="...">
 
             <div>
@@ -133,14 +203,12 @@ foods.map((element) => {
 })
 
 
-
 //Share muss nach dem rendern passieren. Schauen ob das nicht besser geht. Wahrscheinlich promise.
 
 let shareButton =  document.getElementsByClassName("share");
 
 [...shareButton].map((item) => item.addEventListener('click',shareRecipe2,false)
 );
-
 
 function shareRecipe2(element){
 
@@ -149,6 +217,10 @@ function shareRecipe2(element){
     window.alert(`the page at localhost: ${food} says:\n\n\n I am ${food} and I have taken ${url} as my Prisoner`);
     
 };
+
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
 
 
 
