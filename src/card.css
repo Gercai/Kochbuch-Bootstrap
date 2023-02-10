@@ -1,11 +1,6 @@
 .card img{
     max-height: 200px;
     }
-    
-    .cardbox{
-        width: 60vw;
-    }
-    
     .cardboxcenter{
         display: flex;
         justify-content: center;
@@ -16,3 +11,13 @@
         background-color: lightgrey;
       
       } */ 
+
+      .cardbox{
+        width: 100%;
+      }
+
+      #asian, #bowls, #indian, #italian, #vegan, #burger{
+        padding-left: 0;
+        padding-right: 0%
+      }
+
