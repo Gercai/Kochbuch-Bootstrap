@@ -16,12 +16,12 @@
 
     <script src="src/script.js" defer></script>
 
-    <style>
-        .custom-tooltip {
-            /* --bs-tooltip-bg: var(--bs-success); */
-            --bs-tooltip-bg: #ff7300;
-        }
-    </style>
+<style>
+	.custom-tooltip {
+		/* --bs-tooltip-bg: var(--bs-success); */
+		--bs-tooltip-bg: #ff7300;
+	}
+</style>
 </head>
 
 <body>
@@ -30,10 +30,11 @@
     <nav class="navbar navbar-expand-md navbar-dark pt-0">
         <div class="container-fluid bg-success bg-gradient">
             <a class="navbar-brand" href="#">
-                <img data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip"
-                    data-bs-title="https://gercai.github.io/Kochbuch-Bootstrap/" class="rounded-3"
+                <img class="d-inline-block rounded-3 border border-light-subtle"
+							data-bs-toggle="tooltip" data-bs-placement="right" data-bs-custom-class="custom-tooltip"
+                    data-bs-title="https://gercai.github.io/Kochbuch-Bootstrap/" 
                     src="https://images.unsplash.com/photo-1624811533744-f85d5325d49c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=80"
-                    alt="Logo" height="100" class="d-inline-block align-text-top">
+                    alt="Logo" height="100">
                 <span
                     style="margin-left: -120px; margin-right: 120px; color: white; text-shadow: 2px 2px 2px black;">Gruppe
                     4</span>
@@ -43,7 +44,7 @@
                 <span class="navbar-toggler-icon">*</span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerNavi">
-                <ul class="navbar-nav text-center">
+                <ul class="navbar-nav text-center fs-5">
                     <li class="nav-item bg-success bg-gradient">
                         <a class="nav-link" aria-current="page" href="#">Bowls</a>
                     </li>
@@ -86,7 +87,7 @@
             <div class="col col-md-6">
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-success" type="submit">Search</button>
+                    <button class="btn btn-success border light-subtle" type="submit">Search</button>
                 </form>
             </div>
         </div>
