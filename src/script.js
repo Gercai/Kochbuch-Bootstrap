@@ -48,8 +48,14 @@ function toggle(){
 const categories =  document.querySelectorAll("#foodCategories>a");
 [...categories].map((item) => item.addEventListener('click',toggle,false));
 
+cardBox = document.querySelector("#cardBox");
 
-// Database for cards
+function scroll(){
+    cardBox.scrollIntoView(true);
+}
+
+
+// Database for cards. Wer will kann versuchen die Datenbank in eine separate js datei zu packen und hier zu importieren. 
 
 let foods = [ 
     pho = {
@@ -183,7 +189,6 @@ foods.map((food) => {
                         <tr>
                             <td>Butter</td>
                             <td>50 g</td>
-
                     </tbody>
                 </table>
                 <h5>Zubereitung</h2>
@@ -197,9 +202,6 @@ foods.map((food) => {
 </div>
     `
     cardBox.innerHTML += html_to_insert;
-
-
-
 })
 
 
@@ -221,6 +223,19 @@ function shareRecipe2(element){
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
+
+function scroll2Card () {
+
+    const scrollOptions = {
+        block: "start",
+        behavior: "smooth"
+    };
+
+    const recipeItem = document.querySelectorAll(".recipeItem");
+    [...recipeItem].map((element) => element.scrollIntoView(scrollOptions));
+
+    //let el2scroll = document.getElementById("pho")
+}
 
 
 
